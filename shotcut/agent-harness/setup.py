@@ -39,6 +39,11 @@ setup(
         "lxml>=4.9.0",
     ],
     extras_require={
+        "api": [
+            "fastapi>=0.100.0",
+            "uvicorn[standard]>=0.20.0",
+            "python-multipart>=0.0.5",
+        ],
         "dev": [
             "pytest>=7.0.0",
             "pytest-cov>=4.0.0",
@@ -47,6 +52,7 @@ setup(
     entry_points={
         "console_scripts": [
             "cli-anything-shotcut=cli_anything.shotcut.shotcut_cli:cli",
+            "api-anything-shotcut=cli_anything.shotcut.shotcut_api:main",
         ],
     },
     include_package_data=True,

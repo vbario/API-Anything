@@ -38,6 +38,11 @@ setup(
         "prompt-toolkit>=3.0.0",
     ],
     extras_require={
+        "api": [
+            "fastapi>=0.100.0",
+            "uvicorn[standard]>=0.20.0",
+            "python-multipart>=0.0.5",
+        ],
         "dev": [
             "pytest>=7.0.0",
             "pytest-cov>=4.0.0",
@@ -46,6 +51,7 @@ setup(
     entry_points={
         "console_scripts": [
             "cli-anything-kdenlive=cli_anything.kdenlive.kdenlive_cli:main",
+            "api-anything-kdenlive=cli_anything.kdenlive.kdenlive_api:main",
         ],
     },
     include_package_data=True,

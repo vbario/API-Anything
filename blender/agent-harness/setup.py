@@ -48,6 +48,11 @@ setup(
     ],
 
     extras_require={
+        "api": [
+            "fastapi>=0.100.0",
+            "uvicorn[standard]>=0.20.0",
+            "python-multipart>=0.0.5",
+        ],
         "dev": [
             "pytest>=7",
             "pytest-cov>=4",
@@ -57,6 +62,7 @@ setup(
     entry_points={
         "console_scripts": [
             "cli-anything-blender=cli_anything.blender.blender_cli:main",
+            "api-anything-blender=cli_anything.blender.blender_api:main",
         ],
     },
 
